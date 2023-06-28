@@ -1,0 +1,15 @@
+import { query } from "metal-dao";
+//import { BaseRepo } from "../../core/svc/BaseRepo.js";
+import { {{name}}Model } from "../model/{{name}}Model.js";
+
+export class {{name}}Sql {
+
+{{#each body}}
+	@query({{#formatSql this}}{{/formatSql}})
+    public async {{@key}}(params: any[]):Promise<{{@root.name}}Model[]> {
+		throw -1;
+	}
+{{/each}}
+}
+
+export const o{{name}}Sql = new {{name}}Sql();

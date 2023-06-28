@@ -1,5 +1,6 @@
 #!/usr/local/bin/node
 import { buildModel } from "./model/ModelCreator.js"
-console.debug("dcmmc")
+import { buildSql } from "./sql/SqlCreator.js";
 
-buildModel()
+buildModel();
+buildSql();
