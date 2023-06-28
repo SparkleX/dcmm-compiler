@@ -1,0 +1,5 @@
+export enum {{name}}Fields{
+{{#each fields}}
+	{{@key}} = "{{@key}}"{{#unless @last}},{{/unless}}
+{{/each}}
+}

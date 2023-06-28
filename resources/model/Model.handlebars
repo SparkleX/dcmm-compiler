@@ -1,0 +1,7 @@
+export interface {{name}}Model {
+{{#each fields}}
+	/** {{type}} */
+	{{@key}}?: {{#convertType type}}{{/convertType}}{{#unless @last}};{{/unless}}
+
+{{/each}}
+}
