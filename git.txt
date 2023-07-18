@@ -1,6 +1,4 @@
-git push https://github.com/SparkleX/dcmm-compiler
-git push https://gitee.com/SparkleX/dcmm-compiler
-
-git remote add gitee https://gitee.com/SparkleX/dcmm-compiler
-git remote add github https://gitee.com/SparkleX/dcmm-compiler
-
+git remote add all https://github.com/SparkleX/dcmm-compiler
+git remote set-url --add --push all https://gitee.com/SparkleX/dcmm-compiler
+git remote set-url --add --push all https://github.com/SparkleX/dcmm-compiler
+git branch --set-upstream-to all/main
