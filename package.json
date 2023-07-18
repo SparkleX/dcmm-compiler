@@ -11,7 +11,8 @@
     "build": "tsc",
     "link": "npm link dcmm-schema"
   },
-  "author": "",
+  "homepage": "https://gitee.com/SparkleX/dcmm-compiler",
+  "author": "Sun, Xufei",
   "license": "ISC",
   "devDependencies": {
     "@types/jsonfile": "^6.1.1",
