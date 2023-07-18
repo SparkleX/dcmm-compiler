@@ -1,15 +1,16 @@
 import { query } from "metal-dao";
 //import { BaseRepo } from "../../core/svc/BaseRepo.js";
 import { {{name}}Model } from "../model/{{name}}Model.js";
+import { BaseRepo, Context } from "dcmm";
 
-export class {{name}}Sql {
+export class {{name}}Sql extends BaseRepo<{{name}}Model> {
 
 {{#each body}}
 	@query({{#formatSql this}}{{/formatSql}})
-    public async {{@key}}(params: any[]):Promise<{{@root.name}}Model[]> {
+    public async {{@key}}(ctx: Context, params: any[]):Promise<{{@root.name}}Model[]> {
 		throw -1;
 	}
 {{/each}}
 }
 
-export const o{{name}}Sql = new {{name}}Sql();
+export const o{{name}}Sql = new {{name}}Sql("{{name}}");
